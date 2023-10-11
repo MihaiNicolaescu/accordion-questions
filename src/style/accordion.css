@@ -1,0 +1,71 @@
+/* accordion.css */
+
+.Accordion {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    margin:auto;
+    right: 50%;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .Accordion h1 {
+    margin: 0;
+  }
+  
+  .expand {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: 0;
+  }
+  
+  .flag {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
+  .expand img{
+    transition: transform 0.3s ease-in; 
+    box-shadow: 10px 0px 16px rgba(0, 0, 0, 0.5)
+  }
+
+  .expand img:hover{
+    transform: scale(1.1);
+  }
+
+  .accordion-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+  .accordion-header p{
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .accordion-header h1{
+    flex: 1;
+  }
+
+  .expand-button {
+    font-size: 16px; /* Adjust the font size as needed */
+    display: inline-block;
+    width: 16px; /* Set the width to match the font size */
+    height: 16px; /* Set the height to match the font size */
+    text-align: center; /* Center the text horizontally */
+    line-height: 16px; /* Center the text vertically */
+    cursor: pointer; /* Optional: Add a pointer cursor for better UX */
+}
+
+.accordion-header-expanded{
+    color: green;
+}
