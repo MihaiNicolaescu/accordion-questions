@@ -3,16 +3,12 @@ import "./style/accordion.css";
 
  export default function Accordion({ country, idExpanded, onOpen}){
 
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(country.id === idExpanded);
     console.log(country);
     function expand(){
-        debugger;
         if(idExpanded === null || idExpanded === country.id){
-            onOpen(country.id);
+            onOpen(isExpanded ? null: country.id);
             setIsExpanded(!isExpanded)
-            if(isExpanded === true){
-                onOpen(null);
-            }
         }
 
     }
