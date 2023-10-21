@@ -1,8 +1,10 @@
+import { useState } from "react";
 import Accordion from "./Accordion";
 import "./style/app.css";
 
 const countries = [
   {
+    "id": 1,
     "country": "United States",
     "capital": "Washington, D.C.",
     "population": "331 million",
@@ -11,6 +13,7 @@ const countries = [
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1920px-Flag_of_the_United_States.svg.png"
   },
   {
+    "id": 2,
     "country": "France",
     "capital": "Paris",
     "population": "67 million",
@@ -19,6 +22,7 @@ const countries = [
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1920px-Flag_of_France.svg.png"
   },
   {
+    "id": 3,
     "country": "Japan",
     "capital": "Tokyo",
     "population": "126 million",
@@ -27,6 +31,7 @@ const countries = [
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1920px-Flag_of_Japan.svg.png"
   },
   {
+    "id": 4,
     "country": "Brazil",
     "capital": "Brasília",
     "population": "213 million",
@@ -35,6 +40,7 @@ const countries = [
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1920px-Flag_of_Brazil.svg.png"
   },
   {
+    "id": 5,
     "country": "China",
     "capital": "Beijing",
     "population": "1.4 billion",
@@ -46,10 +52,13 @@ const countries = [
 
 
 function App() {
+
+  const [idExpanded, setIdExpanded] = useState(null);
+
   return (
     <div className="App">
       {countries.map((c) => (
-        <Accordion country={c}/>
+        <Accordion country={c} idExpanded={idExpanded} onOpen={setIdExpanded}/>
       ))}
     </div>
   );
